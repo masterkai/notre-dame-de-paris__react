@@ -1,0 +1,53 @@
+header.flexContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .KV {
+    @include breakpoint($ipad){
+      display: none;
+    }
+  }
+  .KV-m {
+    display: none;
+    @include breakpoint($ipad){
+      display: block;
+    }
+  }
+  .copy {
+    @include breakpoint($ipad){
+      bottom: 10px;
+    }
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    padding: 0 20px;
+    h1,h2 {
+      color: #fff;
+      margin-top: 5px;
+    }
+    h1 {
+      font-size: 6rem;
+      @include breakpoint($ipad){
+        font-size: 4.5rem;
+      }
+      @include breakpoint($iphone){
+        font-size: 3.5rem;
+      }
+    }
+    h2 {
+      font-size: 2.375rem;
+      @include breakpoint($ipad){
+        font-size: 1.6rem;
+        line-height: 1.2;
+      }
+      br {
+        display: none;
+        @include breakpoint($iphone){
+          display: block;
+        }
+      }
+    }
+  }
+}
